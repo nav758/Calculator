@@ -1,9 +1,15 @@
+/* Reset default styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: inter;
 }
+
+/* Global styles */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -13,14 +19,18 @@
   width: 100vw;
   gap: 40px;
   background-color: #3b4664;
-  padding: 20px;
+  padding: 50px;
 }
+
+/* Result styles */
 .result {
   width: 700px;
   height: 155px;
   background-color: #181f32;
   border-radius: 12px;
+  padding: 10px;
 }
+
 .result input {
   height: 100%;
   width: 100%;
@@ -29,65 +39,57 @@
   color: #fff;
   font-size: 50px;
   font-weight: 700;
-  padding: 10px;
   text-align: right;
 }
+
 .result h1 {
   color: #fff;
   position: relative;
-  padding-top: 50px;
-  padding-left: 90%;
   font-size: 65px;
+  /* Adjust positioning for center alignment */
+  text-align: center;
+  margin-top: 50px;
 }
+
+/* Number pad styles */
 .number {
   width: 700px;
-  height: 600px;
+  height:530px;
   background-color: #252d44;
   border-radius: 12px;
   padding: 50px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 20px;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
 }
-.reset {
-  grid-column-start: 1;
-  grid-column-end: 3;
+
+/* Button styles */
+.button {
   background-color: #647299;
   color: #fff;
   font-weight: 600;
-  font-size: 30px;
-  padding: 18px;
-  text-align: center;
-  border-radius: 15px;
   font-size: 45px;
-}
-.equal {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  background-color: #d13f30;
-  color: #fff;
-  text-align: center;
-  border-radius: 15px;
-  font-size: 45px;
-  font-weight: 800;
-  padding: 13px;
-}
-.del {
-  background-color: #647299;
-  color: #fff;
-  font-weight: 600;
-  font-size: 40px;
   padding: 15px;
   text-align: center;
   border-radius: 15px;
-  font-size: 45px;
 }
+
+.reset {
+  grid-column: span 2;
+}
+
+.equal {
+  grid-column: span 2;
+  background-color: #d13f30;
+  font-weight: 800;
+}
+
+.del {
+  background-color: #647299;
+}
+
 .q {
   background-color: #eae3db;
-  text-align: center;
-  font-size: 45px;
-  font-weight: 800;
-  border-radius: 15px;
   color: #3b4664;
-  padding: 13px;
+  font-weight: 800;
 }
